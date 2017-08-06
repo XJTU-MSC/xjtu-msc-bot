@@ -1,0 +1,23 @@
+{
+  "name": "xjtu-msc-bot",
+  "version": "0.0.1",
+  "description": "a bot of XJTU Microsoft Student club.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XJTU-MSC/xjtu-msc-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "framework"
+  ],
+  "author": "Thrimbda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XJTU-MSC/xjtu-msc-bot/issues"
+  },
+  "homepage": "https://github.com/XJTU-MSC/xjtu-msc-bot#readme"
+}
