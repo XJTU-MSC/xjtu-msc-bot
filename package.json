@@ -22,6 +22,7 @@
   "homepage": "https://github.com/XJTU-MSC/xjtu-msc-bot#readme",
   "dependencies": {
     "botbuilder": "^3.9.0",
+    "dotenv-extended": "^2.0.1",
     "restify": "^5.0.1"
   }
 }
