@@ -1,6 +1,6 @@
 {
   "name": "xjtu-msc-bot",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "a bot of XJTU Microsoft Student club.",
   "main": "index.js",
   "scripts": {
