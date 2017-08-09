@@ -11,8 +11,7 @@ do
         #echo "$oldrev $newrev"
         cd $WORKTREE
         unset GIT_DIR
-        git pull &> /dev/null
-        # install PyPI packages
+        git pull &> /dev/null\
         git diff --quiet $oldrev $newrev -- $CONFIG
         if [ "$?" -eq "1" ]
         then
