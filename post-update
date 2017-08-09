@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+"""
+this module is a script of git hook to auto deploy node project.
+"""
+import sys
+import os
+
+
+WORKTREE = "/var/www/node_proj/xjtu-msc-bot"
+
+ref = sys.argv[1]
+old_ref = sys.argv[2]
+new_ref = sys.argv[3]
+
+print(ref, old_ref, new_ref)
