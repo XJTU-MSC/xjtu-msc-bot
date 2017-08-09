@@ -24,7 +24,7 @@ do
             echo "package.json does not changed"
         fi
         forever restart app.js
-        echo "deployment complete"
+        echo "deployment complete!"
     else
         echo "This is not master branch, and it will not be deployed"
     fi
