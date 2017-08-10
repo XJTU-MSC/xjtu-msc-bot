@@ -2,6 +2,7 @@
 
 WORKTREE=/var/www/node_proj/xjtu-msc-bot
 CONFIG=package.json
+unset GIT_DIR
 
 while read oldrev newrev ref # post-receive 将读取这三个变量
 do
@@ -10,8 +11,7 @@ do
         echo "Pull to worktree..."
         #echo "$oldrev $newrev"
         cd $WORKTREE
-        unset GIT_DIR
-        git pull origin master &> /dev/null\
+        git pull origin master
         git diff --quiet $oldrev $newrev -- $CONFIG
         if [ "$?" -eq "1" ]
         then
