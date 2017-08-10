@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "execute git hooks post-update" > ./git.log
 WORKTREE=/var/www/node_proj/xjtu-msc-bot
 CONFIG=package.json
 
@@ -18,7 +17,6 @@ do
         if [ "$?" -eq "1" ]
         then
             echo "package.json changed"
-            export LC_ALL=C
             echo "install packages..."
             npm install
         else
