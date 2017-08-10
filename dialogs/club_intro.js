@@ -22,7 +22,10 @@ module.exports = () => {
             }
             session.send("you said: %s", results.response.entity)
         }
-    ]);
+    ])
+    .cancelAction('cancelAction', '好，看来你点错了', {
+        matches: /^取消|^算了$|^cancel/i
+    });
 
     bot.dialog("department_intro", [
         (session) => {

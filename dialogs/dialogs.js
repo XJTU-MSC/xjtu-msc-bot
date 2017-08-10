@@ -4,12 +4,12 @@ module.exports = () => {
 
     //root dialog
     bot.dialog("/", [
-        (session) => {
-            let savedAddress = session.message.address;
-            session.beginDialog('greetings');
-        },
-        (session, results) => session.endDialog('你说 %s', results.response.entity)
-    ]);
+        (session) => session.beginDialog('greetings'),
+        (session, results) => session.endDialog("哇喔")
+    ])
+    .reloadAction("reinstate", "正在删除记忆……", {
+        matches: /^重来|^时光倒流&|^删除记忆$|^洗脑$/i
+    });
 
     bot.dialog('greetings', [
         (session) => {
@@ -27,14 +27,4 @@ module.exports = () => {
             }
         },
     ]);
-
-    bot.dialog('help', function (session, args, next) {
-        session.endDialog("Hi~我是西安交通大学微软学生俱乐部的导游，我可以帮助你了解Xjtu-MSC。 <br/>请输入以恢复对话O(∩_∩)O");
-    })
-    .triggerAction({
-        matches: [/^帮助$/i, /^救命$/i, /^help$/i],
-        onSelectAction: (session, args, next) => {
-            session.beginDialog(args.action, args);
-        }
-    });
 }
