@@ -1,3 +1,4 @@
+require('dotenv-extended').load();
 require('./setup.js')();
 require('./dialogs/dialogs.js')();
 

@@ -3,7 +3,6 @@
 WORKTREE=/var/www/node_proj/xjtu-msc-bot
 CONFIG=package.json
 
-
 while read oldrev newrev ref # post-receive 将读取这三个变量
 do
     if [[ $ref =~ .*/master$ ]]; # 仅允许master分支进行部署
