@@ -20,7 +20,7 @@ module.exports = () => {
                     session.reset("club_intro");
                     break;
             }
-            session.send("you said: %s", results.response.entity)
+            session.endDialog("you said: %s", results.response.entity)
         }
     ])
     .cancelAction('cancelAction', '好，看来你点错了', {

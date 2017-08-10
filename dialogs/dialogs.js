@@ -16,7 +16,6 @@ module.exports = () => {
             builder.Prompts.choice(session, "你好！我是来自西安交通大学微软学生俱乐部的Nightingale，你可以叫我小奈。 <br/>很高兴认识你，请问有什么我可以帮到你的吗？", "MSC社团|了解XJTU", builder.ListStyle.button);
         },
         (session, results) => {
-            console.log(results.response.index);
             if (results.response.index == 0) {
                 session.replaceDialog("club_intro");
             } else if (results.response.index == 1) {
