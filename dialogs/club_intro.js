@@ -1,6 +1,5 @@
 module.exports = () => {
 
-    
     bot.dialog("club_intro", [
         (session) => builder.Prompts.choice(session, "有关西安交通大学MSC，你想了解些什么？", "部门介绍|如何报名|社团福利|社团活动", builder.ListStyle.button),
         (session, results) => {
