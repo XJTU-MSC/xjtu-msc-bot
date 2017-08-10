@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 WORKTREE=/var/www/node_proj/xjtu-msc-bot
 CONFIG=package.json
