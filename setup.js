@@ -1,4 +1,5 @@
 module.exports = () => {
+    require('dotenv-extended').load();
     var restify = require('restify');
     global.builder = require('botbuilder');
 
