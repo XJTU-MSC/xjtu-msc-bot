@@ -27,6 +27,28 @@ module.exports = () => {
         (session) => {
             // let departments = ['']
             // session.Prompts.choice(session, "西安交通大学微软学生俱乐部下设")
+            session.send("department introduction")
+            session.endDialog("很好，我这还没写完");
+        }
+    ]);
+
+    bot.dialog("apply_issue", [
+        (session) => {
+            session.send("apply issue")
+            session.endDialog("很好，我这还没写完");
+        }
+    ]);
+
+    bot.dialog("welfare", [
+        (session) => {
+            session.send("welfare")
+            session.endDialog("很好，我这还没写完");
+        }
+    ]);
+
+    bot.dialog("activity", [
+        (session) => {
+            session.send("activity")
             session.endDialog("很好，我这还没写完");
         }
     ]);
