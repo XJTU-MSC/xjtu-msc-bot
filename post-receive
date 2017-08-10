@@ -11,7 +11,7 @@ do
         #echo "$oldrev $newrev"
         cd $WORKTREE
         unset GIT_DIR
-        git pull &> /dev/null\
+        git pull origin master &> /dev/null\
         git diff --quiet $oldrev $newrev -- $CONFIG
         if [ "$?" -eq "1" ]
         then
@@ -21,7 +21,8 @@ do
         else
             echo "package.json does not changed"
         fi
-        forever restart app.js
+        pm2 kill
+        pm2 start app.js
         echo "deployment complete!"
     else
         echo "This is not master branch, and it will not be deployed"
