@@ -22,7 +22,7 @@ module.exports = () => {
             } else if (results.response.index == 1) {
                 session.replaceDialog("school_intro");
             } else {
-                session.send("你说啥？");
+                session.send("不好意思，我没听懂能否再重复一遍？");
                 session.reset("greetings");
             }
         },
