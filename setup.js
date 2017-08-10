@@ -17,6 +17,5 @@ module.exports = () => {
     // Listen for messages from users 
     server.post('/api/messages', connector.listen());
 
-
     global.bot = new builder.UniversalBot(connector);
 }
