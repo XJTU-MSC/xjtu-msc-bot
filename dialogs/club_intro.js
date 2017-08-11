@@ -71,8 +71,8 @@ module.exports = () => {
 
     bot.dialog("apply_issue", [
         (session, args) => {
-            session.send("apply issue")
-            session.endDialog("很好，我这还没写完");
+            session.send("报名请加群:")
+            session.endDialog("661556408");
         }
     ]);
 

@@ -11,7 +11,7 @@ module.exports = () => {
         }
     });
 
-    bot.dialog("heckathon", [
+    bot.dialog("hackathon", [
         (session, args, next) => {
             let message = new builder.Message(session)
                 .addAttachment({

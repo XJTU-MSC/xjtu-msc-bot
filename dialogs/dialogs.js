@@ -6,14 +6,14 @@ module.exports = () => {
     //root dialog
     bot.dialog("/", [
         (session) => session.beginDialog('greetings'),
-        (session, results) => session.endDialog("哇喔")
+        (session, results) => session.endConversation("哇喔")
     ])
-    .reloadAction("reinstate", "正在删除记忆……", {
-        matches: /^重来|^时光倒流&|^删除记忆$|^洗脑$/i
-    });
+        .reloadAction("reinstate", "正在删除记忆……", {
+            matches: /^重来|^时光倒流&|^删除记忆$|^洗脑$/i
+        });
 
     bot.dialog('greetings', [
-        (session) => {
+        (session, args, next) => {
             if (!session.conversationData.haveGreetinged) {
                 session.send("你好！我是来自西安交通大学微软学生俱乐部的Nightingale，你可以叫我小奈,很高兴认识你!");
                 session.conversationData.haveGreetinged = true;
@@ -22,13 +22,17 @@ module.exports = () => {
         },
         (session, results) => {
             if (results.response.index == 0) {
-                session.replaceDialog("club_intro");
+                session.beginDialog("club_intro");
             } else if (results.response.index == 1) {
-                session.replaceDialog("school_intro");
+                session.beginDialog("school_intro");
             } else {
                 session.send("那么...");
                 session.reset("greetings");
             }
         },
-    ]);
+        (session, results) => session.replaceDialog("greetings")
+    ])
+        .cancelAction('cancelAction', '好，让我们回到上一个话题', {
+            matches: /^取消|^算了$|^cancel/i
+        });
 }
