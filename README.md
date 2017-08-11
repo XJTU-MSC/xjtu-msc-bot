@@ -8,7 +8,7 @@ And **please** tell us your opinion to help us improve him.
 
 ## Channels
 
-> endpoint at [https://thrimda.com/api/messages](https://thrimda.com/api/messages)
+> endpoint at [https://thrimbda.com/api/messages](https://thrimda.com/api/messages)
 
 ### Web Chat
 
