@@ -81,9 +81,6 @@ module.exports = () => {
     ]);
 
     bot.dialog("activity", [
-        (session) => {
-            session.send("activity")
-            session.endDialog("很好，我这还没写完");
-        }
+        (session) => session.endDialog("俱乐部每年会周期性地举行\"hackathon\"以及\"编程之美\"大赛这样的技术活动，除此之外，我们还是一个温暖的大家庭，在社团内部会有诸如俱乐部周年庆、访问兄弟学校俱乐部的活动。<br/>(你可以随时问我什么是hackathon以及什么是编程之美)")
     ]);
 }

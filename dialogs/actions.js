@@ -10,4 +10,20 @@ module.exports = () => {
             session.beginDialog(args.action, args);
         }
     });
+
+    bot.dialog("heckathon", [
+        (session, args, next) => {
+            let message = new builder.Message(session)
+                .addAttachment({
+                contentType: "application/vnd.microsoft.card.adaptive",
+                content: require("../attachments/hackathon_card.json")});
+            session.endDialog(message);
+        }
+    ])
+    .triggerAction({
+        matches: /hackathon|黑客松|黑客马拉松/i,
+        onSelectAction: (session, args, next) => {
+            session.beginDialog(args.action, args);
+        }
+    });
 }

@@ -1,0 +1,19 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "0.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "黑客马拉松 (Hackathon)",
+            "size": "large"
+        },
+        {
+            "type": "TextBlock",
+            "text": "编程马拉松（英语：hackathon，又译为黑客松），又称黑客日（hack day）、黑客节（hackfest）或编程节（codefest），是一个流传于黑客（hacker）当中的新词汇。编程马拉松是一种活动。在该活动当中，电脑程序员以及其他与软件发展相关的人员，如图形设计师、界面设计师与项目经理，相聚在一起，以紧密合作的形式去进行某项软件项目。编程马拉松的灵魂是合作地编写程序和应用。编程马拉松的时长一般在几天到一周不等。编程马拉松不是编写些一次性作品那么简单。编程马拉松的精髓在于：很多人，在一段特定的时间内，相聚在一起，以他们想要的方式，去做他们想做的事情——整个编程的过程几乎没有任何限制或者方向。",
+            "size": "medium",
+            "weight": "lighter",
+            "wrap": true
+        }
+    ]
+}

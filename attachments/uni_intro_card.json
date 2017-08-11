@@ -1,4 +1,4 @@
-module.exports = {
+{
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
     "body": [
